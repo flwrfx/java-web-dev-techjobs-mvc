@@ -28,13 +28,22 @@
     </div>
 
     <table th:fragment="table-temp" class="job-listing">
-        
-        <tr th:each="job : ${jobs}">
 
-            <td th:text="${job}">
+        <tr th:each="job : ${jobs}">
+            <td>
+                <ul th:inline="text" style="list-style: none;">
+                    <li>ID:             [[${job.id}]]</li>
+                    <li>Name:           [[${job.name}]]</li>
+                    <li>Employer:       [[${job.employer}]]</li>
+                    <li>Location:       [[${job.location}]]</li>
+                    <li>Position Type:  [[${job.positionType}]]</li>
+                    <li>Skill:          [[${job.coreCompetency}]]</li>
+
+                </ul>
 
             </td>
         </tr>
+
     </table>
 
 </body>
